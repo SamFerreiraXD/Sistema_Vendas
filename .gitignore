@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ambiente
+.env
+.venv/
+venv/
+
+# Logs
+logs/
+*.log
+
+# Banco local (se usado em testes)
+*.sqlite3
+*.db
+
+# Editor
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
