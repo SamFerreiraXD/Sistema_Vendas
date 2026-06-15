@@ -18,6 +18,9 @@ from app.models.user import Role, User, PasswordReset
 # Módulo 2: Produtos e Categorias
 from app.models.product import Category, Product, StockMovement
 
+# Módulo 3: Clientes e Endereços
+from app.models.client import Client, Address
+
 __all__ = [
     # Módulo 1
     "Role",
@@ -27,4 +30,7 @@ __all__ = [
     "Category",
     "Product",
     "StockMovement",
+    # Módulo 3
+    "Client",
+    "Address",
 ]

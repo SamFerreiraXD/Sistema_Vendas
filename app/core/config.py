@@ -5,6 +5,13 @@ Usa Pydantic Settings para ler variáveis de ambiente de forma tipada e segura.
 Todas as outras partes do sistema devem importar o objeto `settings` deste
 arquivo em vez de usar os.environ diretamente — isso garante validação
 e centraliza a configuração em um único lugar.
+
+Nota sobre extra='ignore':
+- A configuração `extra='ignore'` faz com que Pydantic ignore variáveis de 
+  ambiente que não estão definidas na classe Settings. Isso é necessário para
+  permitir variáveis específicas do Docker (como DB_ROOT_PASSWORD) que não são
+  usadas pela aplicação FastAPI, mas são necessárias para configurar os
+  containers.
 """
 
 from typing import List
@@ -39,6 +46,7 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=True,
+        extra="ignore",  # Ignora variáveis de ambiente não mapeadas (ex: DB_ROOT_PASSWORD para Docker)
     )
 
     @property

@@ -28,7 +28,16 @@ def create_default_roles(db: Session):
         {
             "name": "user",
             "description": "Usuário comum com permissões básicas",
-            "permissions": ["users:read_own", "orders:read", "orders:create"]
+            "permissions": [
+                "users:read_own",
+                "orders:read",
+                "orders:create",
+                "products:read",
+                "categories:read",
+                "stock:read",
+                "clients:read",
+                "addresses:read"
+            ]
         },
         {
             "name": "manager",
@@ -39,7 +48,16 @@ def create_default_roles(db: Session):
                 "orders:read",
                 "orders:write",
                 "reports:read",
-                "products:read"
+                "products:read",
+                "products:write",
+                "categories:read",
+                "categories:write",
+                "stock:read",
+                "stock:write",
+                "clients:read",
+                "clients:write",
+                "addresses:read",
+                "addresses:write"
             ]
         },
         {
@@ -58,9 +76,19 @@ def create_default_roles(db: Session):
                 "products:read",
                 "products:write",
                 "products:delete",
+                "categories:read",
+                "categories:write",
+                "stock:read",
+                "stock:write",
                 "reports:read",
                 "reports:write",
-                "settings:write"
+                "settings:write",
+                "clients:read",
+                "clients:write",
+                "clients:delete",
+                "addresses:read",
+                "addresses:write",
+                "addresses:delete"
             ]
         }
     ]

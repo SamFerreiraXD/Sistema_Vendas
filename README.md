@@ -22,6 +22,14 @@ mercados, papelarias, lojas de informática, etc).
 - Soft delete para preservar histórico
 - Busca e filtros de produtos
 
+### ✅ Módulo 3 — Clientes e Endereços
+- CRUD de clientes (Pessoa Física e Jurídica)
+- Múltiplos endereços por cliente
+- Endereço principal (apenas um por cliente)
+- CPF/CNPJ e email únicos
+- Busca por nome, CPF/CNPJ, email e telefone
+- Soft delete para clientes
+
 ## Pré-requisitos
 
 - Python 3.12+
@@ -119,10 +127,9 @@ Sistema_Vendas/
 
 ## Próximos módulos
 
-1. **Módulo 3 — Clientes e Endereços**
-2. **Módulo 4 — Pedidos e Itens de Pedido**
-3. **Módulo 5 — Relatórios e Analytics**
-4. **Módulo 6 — Integrações e Webhooks**
+**Módulo 4 — Pedidos e Itens de Pedido**
+**Módulo 5 — Relatórios e Analytics**
+**Módulo 6 — Integrações e Webhooks**
 2. Produtos e categorias
 3. Estoque
 4. Clientes

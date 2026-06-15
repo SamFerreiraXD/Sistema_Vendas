@@ -22,7 +22,7 @@ from fastapi.responses import JSONResponse
 
 from app.core.config import settings
 from app.core.logging import setup_logging
-from app.routers import auth, users, categories, products, stock
+from app.routers import auth, users, categories, products, stock, clients, addresses
 
 # Configura logging antes de qualquer outra coisa, para capturar
 # logs já durante a inicialização da aplicação.
@@ -110,6 +110,10 @@ app.include_router(users.router)
 app.include_router(categories.router)
 app.include_router(products.router)
 app.include_router(stock.router)
+
+# Módulo 3: Clientes e Endereços
+app.include_router(clients.router)
+app.include_router(addresses.router)
+
 # app.include_router(sales.router)
-# app.include_router(stock.router)
 # app.include_router(reports.router)
